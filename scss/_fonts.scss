@@ -1,0 +1,18 @@
+@font-face {
+  font-family: "Myriad Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Myriad Pro"), 
+    url("../fonts/Myriad Pro.woff2") format("woff2"),
+    url("../fonts/Myriad Pro.woff") format("woff");
+}
+@font-face {
+  font-family: "Intro Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Myriad Pro"), 
+    url("../fonts/intro_bold.woff2") format("woff2"),
+    url("../fonts/intro_bold.woff") format("woff");
+}

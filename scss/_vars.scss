@@ -1,0 +1,25 @@
+%myriadpro-400 {
+  font-family: "Myriad Pro, sans-serif";
+  font-style: normal;
+  font-weight: 400;
+}
+%introbold-700 {
+  font-family: "Intro Bold, sans-serif";
+  font-style: normal;
+  font-weight: 700;
+}
+$default: #1b1b1b;
+$bg: #15256E;
+$link: #354bb4;
+
+
+%btn {
+  font-family: "Myriad Pro, sans-serif";
+  padding: 12px 30px;
+  border: 1px solid #354bb4;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 20px;
+  color: #354bb4;
+  background-color: transparent;
+}
