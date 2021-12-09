@@ -1,11 +1,25 @@
-$('.content').slick({
+$('.slider').slick({
+  cssEase: 'linear',
   arrows: false,
-  slidesToShow: 6,
-  slidesToScroll: 3,
+  slidesToShow: 3,
+  slidesToScroll: 1,
   infinite: false,
+  arrows: true,
+  nextArrow: '<button type="button" class="slick-next"><img src="img/icon/arrow-right.svg" alt=""></button>',
+  prevArrow: '<button type="button" class="slick-prev"><img src="img/icon/arrow-right.svg" alt=""></button>',
 });
 
 
+
+	// jQuery
+$('.tabs-wrapper').each(function() {
+	let ths = $(this);
+	ths.find('.tab-item').not(':first').hide();
+	ths.find('.tab').click(function() {
+		ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass('active');
+});
 
 function getTimeRemaining(endtime) {
   const total = Date.parse(endtime) - Date.parse(new Date());
