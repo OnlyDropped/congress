@@ -31,6 +31,10 @@
     @extend %btn;
   }
   &__btn {
+    padding: 0px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
     display: none;
   }
 }
@@ -218,9 +222,11 @@
   justify-content: space-between;
   padding: 22px 16px;
   overflow: hidden;
+  background-color: rgba(53, 75, 180, 1);
   &__item {
     padding-left: 40px;
     display: flex;
+    align-items: center;
     padding-right: 40px;
     column-gap: 40px;
     @extend %introbold-700;
@@ -435,16 +441,16 @@
   }
 }
 .news-wrapper {
-  &__wrap{
+  &__wrap {
     display: flex;
     column-gap: 16px;
   }
-  &__wrap--active{
+  &__wrap--active {
     flex-direction: row-reverse;
     margin-right: 23px;
     margin-top: 16px;
   }
-  &__inner{
+  &__inner {
     display: flex;
     flex-direction: column;
     row-gap: 16px;
@@ -494,26 +500,110 @@
     @extend %myriadpro-400;
     color: $default;
   }
-  &__content{
+  &__content {
     max-width: 792px;
     width: 100%;
-    .news-wrapper__block{
+    .news-wrapper__block {
       max-width: 100%;
       padding: 16px 30px 35px 30px;
     }
-    .news-wrapper__title{
+    .news-wrapper__title {
       max-width: 605px;
       margin-bottom: 10px;
     }
-    .news-wrapper__text{
+    .news-wrapper__text {
       max-width: 573px;
       margin-bottom: 49px;
     }
   }
-  &__img{
+  &__img {
     width: 792px;
     height: 300px;
     object-fit: cover;
+  }
+}
+.partners {
+  padding: 60px 0;
+  &__title {
+    text-align: center;
+    margin-bottom: 88px;
+  }
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 16px;
+    row-gap: 15px;
+  }
+  &__card {
+    max-width: 430px;
+    width: 100%;
+    background: #ffffff;
+    padding: 73px 29px 82px;
+    text-align: center;
+  }
+  &__card-logo {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    margin: 0 auto 50px;
+  }
+  &__card-title {
+    @extend %introbold-700;
+    font-size: 20px;
+    line-height: 130%;
+    color: $default;
+    margin-bottom: 10px;
+  }
+  &__card-text {
+    @extend %myriadpro-400;
+    font-size: 16px;
+    color: $default;
+  }
+}
+.accordeon {
+  padding: 60px 0;
+  &__inner {
+    max-width: 100%;
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 80px 70px;
+  }
+  &__inner-title {
+    @extend %introbold-700;
+    font-size: 40px;
+    line-height: 160%;
+    color: $default;
+    margin-bottom: 24px;
+  }
+  .accordion {
+    width: 100%;
+    padding: 20px 0;
+    border-top: 1px solid #354bb4;
+    cursor: pointer;
+    @extend %introbold-700;
+    font-size: 20px;
+    line-height: 160%;
+    color: $default;
+    transition: all 0.4s;
+    &:hover {
+      color: $link;
+    }
+  }
+  .accordeon-wrapper {
+    border-bottom: 1px solid #354bb4;
+  }
+  .panel {
+    padding: 10px 0 20px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    p {
+      max-width: 800px;
+      width: 100%;
+      @extend %myriadpro-400;
+      font-size: 16px;
+      line-height: 20px;
+      color: $default;
+    }
   }
 }
 .footer {

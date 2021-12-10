@@ -14,13 +14,13 @@
   src: local("Myriad Pro"), url("../fonts/intro_bold.woff2") format("woff2"), url("../fonts/intro_bold.woff") format("woff");
 }
 
-.header-menu__nav-link, .info-inner__subtitle, .info-inner__list-item, .programm .programm-inner__link, .slider__item-link, .slider__item-more, .slider__wrapper-share, .news__all, .news-wrapper__text, .footer-inner__item-text, .footer-inner__phone {
+.header-menu__nav-link, .info-inner__subtitle, .info-inner__list-item, .programm .programm-inner__link, .slider__item-link, .slider__item-more, .slider__wrapper-share, .news__all, .news-wrapper__text, .partners__card-text, .accordeon .panel p, .footer-inner__item-text, .footer-inner__phone {
   font-family: "Myriad Pro, sans-serif";
   font-style: normal;
   font-weight: 400;
 }
 
-.info-inner__title, .info-wrapper__link, .info-wrapper__time-title, .info-wrapper__info span, .info-wrapper__info .smalltext, .info-registration__item, .programm .tab, .slider__item-title, .slider__inner-time, .slider__inner-data, .news-wrapper__title {
+.info-inner__title, .info-wrapper__link, .info-wrapper__time-title, .info-wrapper__info span, .info-wrapper__info .smalltext, .info-registration__item, .programm .tab, .slider__item-title, .slider__inner-time, .slider__inner-data, .news-wrapper__title, .partners__card-title, .accordeon__inner-title, .accordeon .accordion {
   font-family: "Intro Bold, sans-serif";
   font-style: normal;
   font-weight: 700;
@@ -162,6 +162,10 @@ a {
 }
 
 .header-menu__btn {
+  padding: 0px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
   display: none;
 }
 
@@ -415,6 +419,7 @@ a {
           justify-content: space-between;
   padding: 22px 16px;
   overflow: hidden;
+  background-color: #354bb4;
 }
 
 .info-registration__item {
@@ -422,6 +427,9 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding-right: 40px;
   -webkit-column-gap: 40px;
           column-gap: 40px;
@@ -827,6 +835,106 @@ a {
   height: 300px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.partners {
+  padding: 60px 0;
+}
+
+.partners__title {
+  text-align: center;
+  margin-bottom: 88px;
+}
+
+.partners__inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-column-gap: 16px;
+          column-gap: 16px;
+  row-gap: 15px;
+}
+
+.partners__card {
+  max-width: 430px;
+  width: 100%;
+  background: #ffffff;
+  padding: 73px 29px 82px;
+  text-align: center;
+}
+
+.partners__card-logo {
+  width: 90px;
+  height: 90px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto 50px;
+}
+
+.partners__card-title {
+  font-size: 20px;
+  line-height: 130%;
+  color: #1b1b1b;
+  margin-bottom: 10px;
+}
+
+.partners__card-text {
+  font-size: 16px;
+  color: #1b1b1b;
+}
+
+.accordeon {
+  padding: 60px 0;
+}
+
+.accordeon__inner {
+  max-width: 100%;
+  width: 100%;
+  background-color: #fff;
+  padding: 50px 80px 70px;
+}
+
+.accordeon__inner-title {
+  font-size: 40px;
+  line-height: 160%;
+  color: #1b1b1b;
+  margin-bottom: 24px;
+}
+
+.accordeon .accordion {
+  width: 100%;
+  padding: 20px 0;
+  border-top: 1px solid #354bb4;
+  cursor: pointer;
+  font-size: 20px;
+  line-height: 160%;
+  color: #1b1b1b;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.accordeon .accordion:hover {
+  color: #354bb4;
+}
+
+.accordeon .accordeon-wrapper {
+  border-bottom: 1px solid #354bb4;
+}
+
+.accordeon .panel {
+  padding: 10px 0 20px;
+  overflow: hidden;
+  -webkit-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordeon .panel p {
+  max-width: 800px;
+  width: 100%;
+  font-size: 16px;
+  line-height: 20px;
+  color: #1b1b1b;
 }
 
 .footer {

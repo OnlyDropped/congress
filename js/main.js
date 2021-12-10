@@ -63,3 +63,11 @@ function initializeClock(id, endtime) {
 
 const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
 initializeClock('clockdiv', deadline);
+
+
+
+
+	$(".accordeon-wrapper .panel").hide().prev().click(function() {
+	$(this).parents(".accordeon-wrapper").find(".panel").not(this).slideUp().prev().removeClass("active");
+	$(this).next().not(":visible").slideDown().prev().addClass("active");
+});
