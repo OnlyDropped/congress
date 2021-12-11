@@ -7,9 +7,25 @@ $('.slider').slick({
   arrows: true,
   nextArrow: '<button type="button" class="slick-next"><img src="img/icon/arrow-right.svg" alt=""></button>',
   prevArrow: '<button type="button" class="slick-prev"><img src="img/icon/arrow-right.svg" alt=""></button>',
+    responsive: [
+    {
+      breakpoint: 769,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: false,
+        centerMode: true,
+        centerPadding: '40px',
+        slidesToShow: 1
+      }
+    }
+  ]
 });
-
-
 
 	// jQuery
 $('.tabs-wrapper').each(function() {
@@ -19,6 +35,15 @@ $('.tabs-wrapper').each(function() {
 		ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
 		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
 	}).eq(0).addClass('active');
+});
+
+	$(".accordeon-wrapper .panel").hide().prev().click(function() {
+	$(this).parents(".accordeon-wrapper").find(".panel").not(this).slideUp().prev().removeClass("active");
+	$(this).next().not(":visible").slideDown().prev().addClass("active");
+});
+
+$('.header-menu__btn').on('click', function () {
+  $('.header-menu__nav').toggleClass('active') 
 });
 
 function getTimeRemaining(endtime) {
@@ -67,7 +92,5 @@ initializeClock('clockdiv', deadline);
 
 
 
-	$(".accordeon-wrapper .panel").hide().prev().click(function() {
-	$(this).parents(".accordeon-wrapper").find(".panel").not(this).slideUp().prev().removeClass("active");
-	$(this).next().not(":visible").slideDown().prev().addClass("active");
-});
+
+

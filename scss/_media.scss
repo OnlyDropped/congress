@@ -1,0 +1,324 @@
+@media (max-width: 768px) {
+  .header-menu {
+    padding: 28px 0 29px;
+    &__nav {
+      //display: none;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      background-color: darkkhaki;
+      flex-direction: column;
+      z-index: 1;
+      transform: translateX(-100%);
+      transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    .active {
+      transform: translateX(0%);
+      transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    &__nav-item + .header-menu__nav-item {
+      margin-left: 0px;
+    }
+    &__nav-item {
+      padding: 16px 0;
+    }
+    &__btn {
+      display: block;
+      margin-left: 48px;
+      z-index: 4;
+    }
+    &__authorization {
+      margin-left: auto;
+    }
+  }
+  .info-inner {
+    justify-content: flex-start;
+    &__images {
+      max-width: 210px;
+      height: 330px;
+    }
+    &__content {
+      padding-top: 40px;
+      padding-left: 33px;
+      width: calc(100% - 210px);
+    }
+    &__title {
+      max-width: 310px;
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 20px;
+    }
+    &__subtitle {
+      font-size: 14px;
+      line-height: 120%;
+    }
+    &__btn {
+      background: #354bb4;
+      color: #fff;
+    }
+    &__list-item {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__more {
+      background-color: #fff;
+      color: #354bb4;
+    }
+    &__links {
+      margin-bottom: 20px;
+    }
+    &__list-item + .info-inner__list-item {
+      padding-left: 16px;
+    }
+  }
+  .info-wrapper {
+    &__card {
+      max-width: 210px;
+      width: 100%;
+    }
+    &__item {
+      width: 210px;
+      padding: 20px 18px 9px 12px;
+    }
+    &__arrow {
+      img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+    &__link {
+      font-size: 14px;
+      line-height: 160%;
+      margin-top: 20px;
+    }
+    &__time {
+      width: 421px;
+    }
+    &__time-title {
+      font-size: 14px;
+      line-height: 120%;
+      padding: 23px 0px 14px;
+    }
+    &__info {
+      padding: 8px 16px 14px;
+      &:last-child {
+        border-right: none;
+      }
+      span {
+        font-size: 32px;
+        line-height: 160%;
+        color: #1b1b1b;
+      }
+      .smalltext {
+        padding-top: 17px;
+        font-size: 14px;
+        line-height: 120%;
+        color: #1b1b1b;
+        &:before {
+          width: 73px;
+        }
+      }
+    }
+  }
+  .info-registration {
+    padding: 18px 0;
+    &__item {
+      font-size: 18px;
+      line-height: 150%;
+      padding-left: 17px;
+      column-gap: 0px;
+      svg {
+        width: 15px;
+        height: 15px;
+        margin-left: 17px;
+      }
+    }
+  }
+  .programm {
+    padding: 80px 0 40px;
+    .tab {
+      padding: 10px 40px 8px;
+      font-size: 14px;
+      line-height: 160%;
+    }
+    .programm-inner {
+      &__wrapper {
+        margin-bottom: 20px;
+      }
+      &__title {
+        font-size: 18px;
+        line-height: 150%;
+      }
+      &__link {
+        font-size: 14px;
+        line-height: 20px;
+        column-gap: 8px;
+        margin-left: 25px;
+      }
+    }
+  }
+  .slider {
+    &__item {
+      //background-color: crimson;
+      max-width: 340px;
+      width: 100%;
+      padding: 14px 14px 15px 14px;
+    }
+    &__item-title {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    &__item-more {
+      border-bottom: 1px solid #354bb4;
+      padding-bottom: 4px;
+      margin-bottom: 26px;
+    }
+    &__inner-time,
+    &__inner-data {
+      font-size: 14px;
+      line-height: 160%;
+    }
+    &__inner-data {
+      &:before {
+        height: 14px;
+      }
+    }
+    &__wrapper-share {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .news {
+    padding: 40px 0;
+    &__box {
+      margin-bottom: 30px;
+    }
+    &__title {
+      font-size: 18px;
+      line-height: 150%;
+    }
+    &__all {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  .news-wrapper {
+    &__wrap {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+    &__inner {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &__block {
+      max-width: 340px;
+      width: 100%;
+      padding: 14px 14px 23px 14px;
+    }
+    &__header {
+      margin-bottom: 23px;
+    }
+    &__list-item {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    .slider__wrapper-share {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__title {
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 8px;
+    }
+    &__text {
+      font-size: 14px;
+      line-height: 20px;
+    }
+    &__content {
+      max-width: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      .news-wrapper__more {
+        display: none;
+      }
+      .news-wrapper__text {
+        margin-bottom: 0;
+      }
+    }
+    &__img {
+      width: 350px;
+    }
+    &__wrap--active {
+      margin-right: 0px;
+    }
+  }
+  .partners {
+    padding: 40px 0;
+    &__title {
+      font-size: 18px;
+      line-height: 150%;
+      margin-bottom: 30px;
+    }
+    &__inner {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    &__card {
+      max-width: 340px;
+      width: 100%;
+      padding: 29px 28px 28px 29px;
+    }
+    &__card-logo {
+      margin: 0 auto 20px;
+    }
+    &__card-title {
+      font-size: 14px;
+      line-height: 130%;
+      margin-bottom: 10px;
+    }
+    &__card-text {
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+  .accordeon {
+    padding: 40px 0;
+    &__inner {
+      padding: 40px 30px;
+    }
+    &__inner-title {
+      font-size: 18px;
+      line-height: 140%;
+      margin-bottom: 19px;
+    }
+    .accordeon .accordion {
+      padding: 12px 0;
+      font-size: 14px;
+      line-height: 160%;
+    }
+  }
+  .footer-inner {
+    column-gap: 40px;
+    padding: 14px 0 23px;
+    &__item-text {
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 8px;
+    }
+    &__info {
+      align-items: baseline;
+    }
+    &__info-copyright {
+      font-size: 14px;
+      line-height: 120%;
+      margin-bottom: 12px;
+    }
+    &__info-link {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+}
