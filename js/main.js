@@ -16,11 +16,13 @@ $('.slider').slick({
       }
     },
     {
-      breakpoint: 480,
+      breakpoint: 376,
       settings: {
         arrows: false,
-        centerMode: true,
-        centerPadding: '40px',
+        dots: true,
+        //autoplay: true,
+        //fade: true,
+        slidesToScroll: 1,
         slidesToShow: 1
       }
     }
