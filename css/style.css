@@ -119,6 +119,12 @@ a {
   background-color: #fff;
   -webkit-box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.25);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 111;
 }
 
 .header-menu {
@@ -1569,6 +1575,9 @@ a {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     row-gap: 10px;
+  }
+  .footer-inner__info {
+    margin-top: 15px;
   }
 }
 /*# sourceMappingURL=style.css.map */
